@@ -3,3 +3,28 @@ Serges-MacBook-Pro:profiles-rest-api pomme4nous$ vagrant ssh
 
 #end vagrant server
 vagrant@ubuntu-bionic:~$ exit
+
+#create python virtual env
+vagrant@ubuntu-bionic:/vagrant$ python -m venv ~/env
+
+#activate virtual env
+vagrant@ubuntu-bionic:/vagrant$ source ~/env/bin/activate
+
+#deactivate virtual environment
+(env) vagrant@ubuntu-bionic:/vagrant$ deactivate
+
+#install requirements in virtual environment pkg
+(env) vagrant@ubuntu-bionic:/vagrant$ pip install -r requirements.txt
+
+#create django project - profiles_project
+(env) vagrant@ubuntu-bionic:/vagrant$ django-admin.py startproject profiles_project .
+
+#create django app - profiles_api
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py startapp profiles_api
+
+#start django dev web server
+go to evn
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000
+
+#stop django dev web server
+cntl+C  ^C
