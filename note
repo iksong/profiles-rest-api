@@ -1,0 +1,5 @@
+#start vagrant server
+Serges-MacBook-Pro:profiles-rest-api pomme4nous$ vagrant ssh
+
+#end vagrant server
+vagrant@ubuntu-bionic:~$ exit
