@@ -38,3 +38,11 @@ cntl+C  ^C
 
 #enable models for super user - admin.py
 admin.site.register(models.UserProfile)
+
+#create api view in views.py
+
+#map url in urls.py, add url urlpatterns in profiles_api.urls py
+path('api/', include('profiles_api.urls')),
+urlpatterns = [
+    path('hello-view/', views.HelloApiView.as_view()),
+]
