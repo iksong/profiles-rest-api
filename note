@@ -1,6 +1,9 @@
 #start vagrant server
 Serges-MacBook-Pro:profiles-rest-api pomme4nous$ vagrant ssh
 
+#if needed run vagrant up first
+Serges-MacBook-Pro:profiles-rest-api pomme4nous$ vagrant up
+
 #end vagrant server
 vagrant@ubuntu-bionic:~$ exit
 
@@ -50,5 +53,14 @@ urlpatterns = [
     path('hello-view/', views.HelloApiView.as_view()),
 ]
 
-#check server 
+#check server
 http://127.0.0.1:8000/api/hello-view/
+
+#add serializer - to receive POST request
+profiles_api/serializer.py
+
+#add POST request in APIView
+profiles_api/views.py def post()
+
+#add PUT, PATCH, DELELTE
+profiles_api/views.py def put, patch, delete 
