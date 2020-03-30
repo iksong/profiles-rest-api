@@ -28,3 +28,7 @@ go to evn
 
 #stop django dev web server
 cntl+C  ^C
+
+#every time create a model, make migrations then migrate
+(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations profiles_api
+(env) vagrant@ubuntu-bionic:/vagrant$ python manange.py migrate
