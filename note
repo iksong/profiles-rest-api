@@ -63,4 +63,18 @@ profiles_api/serializer.py
 profiles_api/views.py def post()
 
 #add PUT, PATCH, DELELTE
-profiles_api/views.py def put, patch, delete 
+profiles_api/views.py def put, patch, delete
+
+#profile API
+create user profile serializer
+  - UserProfileSerializer in serializers.py
+create profile viewset, model view set
+  - UserProfileViewSet in views.py
+register profile viewset with the URL router
+  - router.register('profile', views.UserProfileViewSet) in urls.py
+register profile viewset with url router
+
+#add Permissions
+create permissions.py
+create UpdateOwnProfile class in permissions.py
+use permissions in view.py 
