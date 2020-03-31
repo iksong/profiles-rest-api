@@ -101,4 +101,12 @@ link viewset to URLs
   - in urls.py, router.register('feed', views.UserProfileViewSet)
 add permission to feed api
   - in permissions.py, add class UpdateOwnStatus
-  - in views.py, use the permission 
+  - in views.py, use the permission
+
+# Deploy to AWS
+    - add ssh key to AWS
+    - launch instance
+    - AWS console
+    https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:sort=instanceId
+
+    
