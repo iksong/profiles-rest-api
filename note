@@ -82,4 +82,23 @@ use permissions in view.py
 #add login using token authentication
 - add login view.py
 - rest_framework.authtoken.views import ObtainAuthToken
-- rest_framework.settings import api_settings 
+- rest_framework.settings import api_settings
+
+# Feed API
+add new model for feed in model.py
+  - class ProfileFeedItem(models.Model)
+create migration
+  - (env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations
+migrate
+  - (env) vagrant@ubuntu-bionic:/vagrant$ python manage.py migrate
+add profile feed model to admin
+  - in admin.py add admin.site.register(models.ProfileFeedItem)
+create a serializer for feed item
+  - add ProfileFeedItemSerializer in serializers.py
+create a viewset
+  - views.py, create UserProfileFeedViewSet
+link viewset to URLs
+  - in urls.py, router.register('feed', views.UserProfileViewSet)
+add permission to feed api
+  - in permissions.py, add class UpdateOwnStatus
+  - in views.py, use the permission 
