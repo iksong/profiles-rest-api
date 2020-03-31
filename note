@@ -77,4 +77,9 @@ register profile viewset with url router
 #add Permissions
 create permissions.py
 create UpdateOwnProfile class in permissions.py
-use permissions in view.py 
+use permissions in view.py
+
+#add login using token authentication
+- add login view.py
+- rest_framework.authtoken.views import ObtainAuthToken
+- rest_framework.settings import api_settings 
