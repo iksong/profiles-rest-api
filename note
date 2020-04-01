@@ -109,4 +109,6 @@ add permission to feed api
     - AWS console
     https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:sort=instanceId
 
-    
+    - add deploy scripts
+    - goto AWS console copy instance's public dns
+    - in terminal, $ ssh ubuntu@ec2-3-133-82-112.us-east-2.compute.amazonaws.com
