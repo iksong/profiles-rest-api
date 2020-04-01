@@ -24,6 +24,7 @@ class HelloApiView(APIView):
             'Is similar to a traditional django view',
             'Gives you the most control over you app logic',
             'Is mapped manually to URLs',
+            'This is an addition',
         ]
 
         return Response({'message': 'Hello!', 'an_apiview': an_apiview})
