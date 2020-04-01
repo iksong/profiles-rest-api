@@ -112,3 +112,16 @@ add permission to feed api
     - add deploy scripts
     - goto AWS console copy instance's public dns
     - in terminal, $ ssh ubuntu@ec2-3-133-82-112.us-east-2.compute.amazonaws.com
+    - download and run scrip
+    ubuntu@ip-172-31-44-14:~$ curl -sL https://raw.githubusercontent.com/iksong/profiles-rest-api/master/deploy/setup.sh | sudo bash -
+
+    - update
+    - ssh to the server $ ssh ubuntu@ec2-3-133-82-112.us-east-2.compute.amazonaws.com
+    - ubuntu@ip-172-31-44-14:~$ cd /usr/local/apps/profiles-rest-api/
+    - update
+    ubuntu@ip-172-31-44-14:/usr/local/apps/profiles-rest-api$ sudo sh ./deploy/update.sh
+    - create super user
+    ubuntu@ip-172-31-44-14:/usr/local/apps/profiles-rest-api$ sudo env/bin/python manage.py createsuperuser
+
+    - disconnect from AWS
+    $exit
