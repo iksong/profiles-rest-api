@@ -7,6 +7,9 @@ Serges-MacBook-Pro:profiles-rest-api pomme4nous$ vagrant up
 #end vagrant server
 vagrant@ubuntu-bionic:~$ exit
 
+#go to /vagrant
+vagrant@ubuntu-bionic:~$ cd /vagrant
+
 #create python virtual env
 vagrant@ubuntu-bionic:/vagrant$ python -m venv ~/env
 

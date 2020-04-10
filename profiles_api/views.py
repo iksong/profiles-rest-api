@@ -13,6 +13,12 @@ from profiles_api import models
 from profiles_api import permissions
 
 
+class V1View(APIView):
+    def get(self, request, format=None):
+
+        return Response({"applinks":{"apps":[],"details":[{"appID":"5KLJKY3T39.com.citi.mobile.brave.universallink.demo","paths":["NOT /e/*","/US/ag/family/*"]},{"appID":"5KLJKY3T39.com.citi.mobile.brave.fintech","paths":["NOT /e/*","/US/ag/family/*"]}]}, "webcredentials":{"apps": []}})
+
+
 class HelloApiView(APIView):
     """Test API View"""
     serializer_class = serializers.HelloSerializer
